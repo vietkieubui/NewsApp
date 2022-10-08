@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar mToolbar;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        viewPager.addOnPageChangeListener();
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
     }
 }
