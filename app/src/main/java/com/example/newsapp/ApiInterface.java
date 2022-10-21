@@ -1,25 +1,40 @@
 package com.example.newsapp;
 
+import com.example.newsapp.Model.mainNews;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    String BASE_URL="https://newsapi.org/v2/";
+    String BASE_URL = "https://backend-news-tn.herokuapp.com/api/news/";
 
-    @GET("top-headlines")
-    Call<mainNews> getNews(
-            @Query("country") String country,
-            @Query("pageSize") int pageSize,
-            @Query("apiKey") String apiKey
-    );
+    @GET("getAll")
+    Call<mainNews> getNews();
 
-    @GET("top-headlines")
+    @GET("search")
     Call<mainNews> getCategoryNews(
-            @Query("country") String country,
-            @Query("category") String category,
-            @Query("pageSize") int pageSize,
-            @Query("apiKey") String apiKey
+            @Query("searchTerm") String category
     );
+    @GET("search")
+    Call<mainNews> findNews(
+            @Query("searchTerm") String category
+    );
+
+
+//    @GET("top-headlines")
+//    Call<mainNews> getCategoryNews(
+//            @Query("country") String country,
+//            @Query("category") String category,
+//            @Query("pageSize") int pageSize,
+//            @Query("apiKey") String apiKey
+//    );
+
+//    @GET("top-headlines")
+//    Call<mainNews> getNews(
+//            @Query("country") String country,
+//            @Query("pageSize") int pageSize,
+//            @Query("apiKey") String apiKey
+//    );
 
 }

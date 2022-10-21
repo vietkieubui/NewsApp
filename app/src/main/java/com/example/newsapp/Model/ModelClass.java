@@ -1,7 +1,21 @@
-package com.example.newsapp;
+package com.example.newsapp.Model;
 
 public class ModelClass {
-    String author, title, description, url, urlToImage,  publishedAt;
+    String author;
+    String title;
+    String description;
+    String url;
+    String urlToImage;
+
+    public String getPublishAt() {
+        return publishAt;
+    }
+
+    public void setPublishAt(String publishAt) {
+        this.publishAt = publishAt;
+    }
+
+    String publishAt;
 
     public ModelClass(String author, String title, String description, String url, String urlToImage, String publishedAt) {
         this.author = author;
@@ -9,7 +23,7 @@ public class ModelClass {
         this.description = description;
         this.url = url;
         this.urlToImage = urlToImage;
-        this.publishedAt = publishedAt;
+        this.publishAt = publishedAt;
     }
 
     public String getAuthor() {
@@ -52,11 +66,5 @@ public class ModelClass {
         this.urlToImage = urlToImage;
     }
 
-    public String getPublishedAt() {
-        return publishedAt;
-    }
 
-    public void setPublishedAt(String publishedAt) {
-        this.publishedAt = publishedAt;
-    }
 }

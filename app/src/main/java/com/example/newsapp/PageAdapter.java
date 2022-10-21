@@ -5,9 +5,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.newsapp.Fragment.EntertainmentFragment;
+import com.example.newsapp.Fragment.HealthFragment;
+import com.example.newsapp.Fragment.HomeFragment;
+import com.example.newsapp.Fragment.ScienceFragment;
+import com.example.newsapp.Fragment.SportsFragment;
+import com.example.newsapp.Fragment.TechFragment;
+import com.example.newsapp.Model.SearchModel;
+
 public class PageAdapter extends FragmentPagerAdapter {
 
     int tabCount;
+    SearchModel searchModel;
 
     public PageAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
@@ -34,6 +43,8 @@ public class PageAdapter extends FragmentPagerAdapter {
                 return null;
         }
     }
+
+
 
     @Override
     public int getCount() {

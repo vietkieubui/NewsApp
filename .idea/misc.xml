@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Code/NewsApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.132" />
+        <entry key="..\:/Android Code/NewsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.132" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.19722222222222222" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/activity_web_view.xml" value="0.2" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/entertaimentfragment.xml" value="0.19722222222222222" />
@@ -11,6 +13,8 @@
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/homefragment.xml" value="0.19722222222222222" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/layout_item.xml" value="0.2" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/sciencefragment.xml" value="0.19722222222222222" />
+        <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/search_bar.xml" value="0.275" />
+        <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/search_view.xml" value="0.12916666666666668" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/sportsfragment.xml" value="0.17222222222222222" />
         <entry key="..\:/Android Code/NewsApp/app/src/main/res/layout/technologyfragment.xml" value="0.19722222222222222" />
       </map>

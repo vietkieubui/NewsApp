@@ -4,9 +4,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.newsapp.Model.ModelClass;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,8 +44,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 context.startActivity(intent);
             }
         });
-        holder.mTime.setText("Published At: "+modelClassArrayList.get(position).getPublishedAt());
-        holder.mAuthor.setText(modelClassArrayList.get(position).getAuthor());
+        holder.mTime.setText("Ngày đăng: "+modelClassArrayList.get(position).getPublishAt());
+        holder.mAuthor.setText("Tác giả: "+modelClassArrayList.get(position).getAuthor());
         holder.mHeading.setText(modelClassArrayList.get(position).getTitle());
         holder.mContent.setText(modelClassArrayList.get(position).getDescription());
         Glide.with(context).load(modelClassArrayList.get(position).getUrlToImage()).into(holder.imageView);
