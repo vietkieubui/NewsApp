@@ -1,16 +1,22 @@
-package com.example.newsapp;
+package com.example.newsapp.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
-import com.example.newsapp.Model.SearchModel;
+import com.example.newsapp.Models.SearchModel;
+import com.example.newsapp.PageAdapter;
+import com.example.newsapp.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -22,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar mToolbar;
     EditText searchText;
     SearchModel searchModel;
+    ImageButton searchBtn;
 
 
     @Override
@@ -38,9 +45,17 @@ public class MainActivity extends AppCompatActivity {
         mSports = findViewById(R.id.sports);
         mScience = findViewById(R.id.science);
 
+
         ViewPager viewPager = findViewById(R.id.fragmentcontainer);
         tabLayout = findViewById(R.id.include);
-        searchText = (EditText) findViewById(R.id.search_text);
+        searchBtn = findViewById(R.id.searchBtn);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SearchActivity.class));
+            }
+        });
+
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(), 6);
         viewPager.setAdapter(pageAdapter);
@@ -65,28 +80,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        searchText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                SearchModel.searchText = searchText.getText().toString();
-                Log.d("TAG TEXT CHANGE: ", SearchModel.searchText);
-                pageAdapter.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
     }
+
+
 }

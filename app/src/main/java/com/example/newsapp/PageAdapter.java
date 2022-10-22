@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.newsapp.Fragment.EntertainmentFragment;
-import com.example.newsapp.Fragment.HealthFragment;
-import com.example.newsapp.Fragment.HomeFragment;
-import com.example.newsapp.Fragment.ScienceFragment;
-import com.example.newsapp.Fragment.SportsFragment;
-import com.example.newsapp.Fragment.TechFragment;
-import com.example.newsapp.Model.SearchModel;
+import com.example.newsapp.Fragments.EntertainmentFragment;
+import com.example.newsapp.Fragments.HealthFragment;
+import com.example.newsapp.Fragments.HomeFragment;
+import com.example.newsapp.Fragments.ScienceFragment;
+import com.example.newsapp.Fragments.SportsFragment;
+import com.example.newsapp.Fragments.TechFragment;
+import com.example.newsapp.Models.SearchModel;
 
 public class PageAdapter extends FragmentPagerAdapter {
 

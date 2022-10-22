@@ -1,4 +1,4 @@
-package com.example.newsapp.Fragment;
+package com.example.newsapp.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newsapp.Adapter;
 import com.example.newsapp.ApiUtilities;
-import com.example.newsapp.Model.ModelClass;
-import com.example.newsapp.Model.mainNews;
+import com.example.newsapp.Models.ModelClass;
+import com.example.newsapp.Models.mainNews;
 import com.example.newsapp.R;
 
 import java.util.ArrayList;

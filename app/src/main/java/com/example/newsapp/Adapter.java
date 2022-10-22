@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.newsapp.Model.ModelClass;
+import com.example.newsapp.Models.ModelClass;
 
 import java.util.ArrayList;
 

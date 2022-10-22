@@ -13,4 +13,19 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Material3Theme.TabText" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="fontFamily">@font/medium</item>
+    </style>
+
+    <style name="Material3Theme.AppBarExpandedTitle" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Material3Theme.AppBarCollapsedTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
 </resources>

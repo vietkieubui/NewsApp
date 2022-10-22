@@ -1,6 +1,6 @@
 package com.example.newsapp;
 
-import com.example.newsapp.Model.mainNews;
+import com.example.newsapp.Models.mainNews;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

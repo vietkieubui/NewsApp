@@ -1,11 +1,9 @@
-package com.example.newsapp.Fragment;
+package com.example.newsapp.Fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,9 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.newsapp.Adapter;
 import com.example.newsapp.ApiUtilities;
-import com.example.newsapp.Model.ModelClass;
-import com.example.newsapp.Model.SearchModel;
-import com.example.newsapp.Model.mainNews;
+import com.example.newsapp.Models.ModelClass;
+import com.example.newsapp.Models.mainNews;
 import com.example.newsapp.R;
 
 import java.util.ArrayList;
@@ -44,13 +41,12 @@ public class HomeFragment extends Fragment {
         recyclerViewofHome.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new Adapter(getContext(), modelClassArrayList);
         recyclerViewofHome.setAdapter(adapter);
-        findNews(SearchModel.searchText);
+        findNews();
         return v;
     }
 
-    public void findNews(String searchText) {
-        Log.d("FINDNEWS: ",searchText);
-        ApiUtilities.getApiInterface().findNews(searchText).enqueue(new Callback<mainNews>() {
+    public void findNews( ) {
+        ApiUtilities.getApiInterface().getNews().enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(Call<mainNews> call, Response<mainNews> response) {
                 if (response.isSuccessful()) {
