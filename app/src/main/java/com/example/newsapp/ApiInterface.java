@@ -1,9 +1,14 @@
 package com.example.newsapp;
 
+import com.example.newsapp.Models.PlusViewModel;
 import com.example.newsapp.Models.mainNews;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
@@ -20,6 +25,11 @@ public interface ApiInterface {
     Call<mainNews> findNews(
             @Query("searchTerm") String category
     );
+
+    @POST("plusView")
+    Call<PlusViewModel> plusView(
+            @Body PlusViewModel plusViewModel
+            );
 
 
 //    @GET("top-headlines")

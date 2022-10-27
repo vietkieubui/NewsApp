@@ -1,29 +1,34 @@
 package com.example.newsapp.Models;
 
 public class ModelClass {
+    String _id;
     String author;
     String title;
     String description;
     String url;
     String urlToImage;
+    String view;
 
-    public String getPublishAt() {
-        return publishAt;
-    }
-
-    public void setPublishAt(String publishAt) {
-        this.publishAt = publishAt;
-    }
 
     String publishAt;
 
-    public ModelClass(String author, String title, String description, String url, String urlToImage, String publishedAt) {
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public ModelClass(String _id, String author, String title, String description, String url, String urlToImage, String publishedAt, String view) {
+        this._id = _id;
         this.author = author;
         this.title = title;
         this.description = description;
         this.url = url;
         this.urlToImage = urlToImage;
         this.publishAt = publishedAt;
+        this.view = view;
     }
 
     public String getAuthor() {
@@ -64,6 +69,22 @@ public class ModelClass {
 
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
+    }
+
+    public String getPublishAt() {
+        return publishAt;
+    }
+
+    public void setPublishAt(String publishAt) {
+        this.publishAt = publishAt;
+    }
+
+    public String getView() {
+        return view;
+    }
+
+    public void setView(String view) {
+        this.view = view;
     }
 
 
