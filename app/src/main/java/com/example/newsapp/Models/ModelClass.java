@@ -1,5 +1,7 @@
 package com.example.newsapp.Models;
 
+import java.util.Date;
+
 public class ModelClass {
     String _id;
     String author;
@@ -10,7 +12,11 @@ public class ModelClass {
     String view;
 
 
-    String publishAt;
+    public void setPublishAt(Date publishAt) {
+        this.publishAt = publishAt;
+    }
+
+    Date publishAt;
 
     public String get_id() {
         return _id;
@@ -20,14 +26,14 @@ public class ModelClass {
         this._id = _id;
     }
 
-    public ModelClass(String _id, String author, String title, String description, String url, String urlToImage, String publishedAt, String view) {
+    public ModelClass(String _id, String author, String title, String description, String url, String urlToImage, Date publishAt, String view) {
         this._id = _id;
         this.author = author;
         this.title = title;
         this.description = description;
         this.url = url;
         this.urlToImage = urlToImage;
-        this.publishAt = publishedAt;
+        this.publishAt = publishAt;
         this.view = view;
     }
 
@@ -71,12 +77,8 @@ public class ModelClass {
         this.urlToImage = urlToImage;
     }
 
-    public String getPublishAt() {
+    public Date getPublishAt() {
         return publishAt;
-    }
-
-    public void setPublishAt(String publishAt) {
-        this.publishAt = publishAt;
     }
 
     public String getView() {

@@ -18,7 +18,12 @@ import com.bumptech.glide.Glide;
 import com.example.newsapp.Models.ModelClass;
 import com.example.newsapp.Models.PlusViewModel;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -65,7 +70,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 context.startActivity(intent);
             }
         });
-        holder.mTime.setText("Ngày đăng: " + modelClassArrayList.get(position).getPublishAt());
+//        Locale locale = new Locale("vi");
+//        Locale locale = new Locale("vi", "VN");
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", locale);
+//        sdf.format(modelClassArrayList.get(position).getPublishAt());
+        String dateString = new SimpleDateFormat("hh:mm dd-MM-yyyy").format(modelClassArrayList.get(position).getPublishAt());
+        holder.mTime.setText("Ngày đăng: " + dateString);
         holder.mAuthor.setText("Tác giả: " + modelClassArrayList.get(position).getAuthor());
         holder.mHeading.setText(modelClassArrayList.get(position).getTitle());
         holder.mContent.setText(modelClassArrayList.get(position).getDescription());
