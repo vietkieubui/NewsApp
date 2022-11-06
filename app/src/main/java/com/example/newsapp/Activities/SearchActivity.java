@@ -60,9 +60,7 @@ public class SearchActivity extends AppCompatActivity {
                 (new Debouncer()).debounce(Void.class, new Runnable() {
                     @Override
                     public void run() {
-                        searchNews(searchText.getText().toString());
-                        Log.d("TAGGG:",searchText.getText().toString());
-                    }
+                        searchNews(searchText.getText().toString());                    }
                 },500, TimeUnit.MILLISECONDS);
 
             }

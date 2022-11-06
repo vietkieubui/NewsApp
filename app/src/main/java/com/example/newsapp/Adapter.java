@@ -70,10 +70,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 context.startActivity(intent);
             }
         });
-//        Locale locale = new Locale("vi");
-//        Locale locale = new Locale("vi", "VN");
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", locale);
-//        sdf.format(modelClassArrayList.get(position).getPublishAt());
+
         String dateString = new SimpleDateFormat("hh:mm dd-MM-yyyy").format(modelClassArrayList.get(position).getPublishAt());
         holder.mTime.setText("Ngày đăng: " + dateString);
         holder.mAuthor.setText("Tác giả: " + modelClassArrayList.get(position).getAuthor());

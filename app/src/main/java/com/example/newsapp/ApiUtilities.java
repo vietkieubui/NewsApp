@@ -11,7 +11,5 @@ public class ApiUtilities {
                     .build();
         }
         return retrofit.create(ApiInterface.class);
-
     }
-
 }

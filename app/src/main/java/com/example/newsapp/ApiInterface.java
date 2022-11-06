@@ -29,7 +29,7 @@ public interface ApiInterface {
     @POST("plusView")
     Call<PlusViewModel> plusView(
             @Body PlusViewModel plusViewModel
-            );
+    );
 
 
 //    @GET("top-headlines")

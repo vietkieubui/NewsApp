@@ -54,10 +54,8 @@ public class HomeFragment extends Fragment {
                     adapter.notifyDataSetChanged();
                 }
             }
-
             @Override
             public void onFailure(Call<mainNews> call, Throwable t) {
-
             }
         });
     }
